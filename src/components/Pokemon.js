@@ -1,7 +1,8 @@
 import React from "react";
 
 const Pokemon = (props) => {
-  const items = props.card.pokemonCards.map((pokemonCard, index) => {
+  console.log(cardList);
+  const items = props.card.cardList.map((pokemonCard, index) => {
     return <li key={index}>{pokemonCard}</li>;
   });
 
