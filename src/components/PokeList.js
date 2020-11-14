@@ -3,16 +3,10 @@ import Pokemon from "./Pokemon";
 
 class PokeList extends React.Component {
   render() {
-    console.log(this.cardList);
+    console.log(this.props.cardList);
     const items = this.props.cardList.map((card, index) => {
       return (
-        <li
-          key={card.id}
-          id={index}
-          className="card"
-          title={card.name}
-          img={card.url}
-        >
+        <li key={card.id} id={index} className="card" title={card.name}>
           <Pokemon card={card} />
         </li>
       );

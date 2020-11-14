@@ -1,14 +1,13 @@
 import React from "react";
 
 const Pokemon = (props) => {
-  console.log(cardList);
-  const items = props.card.cardList.map((pokemonCard, index) => {
-    return <li key={index}>{pokemonCard}</li>;
+  const items = props.card.types.map((type, index) => {
+    return <li key={index}>{type}</li>;
   });
 
   return (
     <article>
-      <img>{props.card.url} alt=""</img>
+      <img src={props.card.url} alt="" />
       <h2>{props.card.name}</h2>
       <ul>{items}</ul>
     </article>
